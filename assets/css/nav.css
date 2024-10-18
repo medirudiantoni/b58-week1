@@ -1,0 +1,51 @@
+nav {
+    height: fit-content;
+    background-color: #f8fafc;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 20px 40px;
+    z-index: 100;
+}
+
+.nav-content {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav .nav-content .menu .logo img {
+    width: 60px;
+    margin-right: 32px;
+}
+
+nav .nav-content .menu a {
+    color: black;
+    text-decoration: none;
+    font-weight: 700;
+    margin-right: 20px;
+}
+
+nav .nav-content .menu a:hover {
+    color: blueviolet;
+}
+
+nav .nav-content .menu a:active {
+    color: rgb(72, 5, 135);
+}
+
+nav .nav-content .menu {
+    display: flex;
+    align-items: center;
+}
+
+.contact-me {
+    padding: 8px 20px;
+    background-color: black;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+}

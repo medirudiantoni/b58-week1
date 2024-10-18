@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./assets/css/project.css" />
+    <link rel="stylesheet" href="./assets/css/nav.css">
+  </head>
+  <body>
+    <nav>
+      <div class="nav-content">
+        <div class="menu">
+          <a href="#" class="logo">
+            <img
+              src="https://dumbways.id/assets/images/brandred.png"
+            />
+          </a>
+          <a href="/">Home</a>
+          <a href="./blog.html">My Blog</a>
+          <a href="./project.html">My Project</a>
+        </div>
+        <a href="./contact.html" class="contact-me">Contact me</a>
+      </div>
+    </nav>
+    <main>
+      <div class="add-my-project">
+        <div class="container">
+            <h1>ADD MY PROJECT</h1>
+            <form id="add_my_project">
+                <label for="project_name">Project Name</label>
+                <input type="text" id="project_name">
+                <div class="input_date">
+                    <div>
+                        <label for="start_date">Start Date</label>
+                        <input type="date" id="start_date">
+                    </div>
+                    <div>
+                        <label for="end_date">End Date</label>
+                        <input type="date" id="end_date">
+                    </div>
+                </div>
+                <label for="description">Description</label>
+                <textarea name="description" id="description" rows="12"></textarea>
+                <div class="checkboxes">
+                    <label>
+                        <input type="checkbox" id="node_js" value="Node JS">
+                        Node js
+                    </label>
+                    <label>
+                        <input type="checkbox" id="next_js" value="Next JS">
+                        Next js
+                    </label>
+                    <label>
+                        <input type="checkbox" id="react_js" value="React JS">
+                        React js
+                    </label>
+                    <label>
+                        <input type="checkbox" id="typescript" value="Typescript">
+                        Typescript
+                    </label>
+                </div>
+                <label for="upload_image">Upload Image</label>
+                <input type="file" id="upload_image">
+                <div class="submit_button">
+                    <button>Submit</button>
+                </div>
+            </form>
+        </div>
+      </div>
+      <div class="my_project">
+        <h1>MY PROJECT</h1>
+        <div class="my-projects-container" id="my-projects-container">
+            <!-- Card Project here -->
+        </div>
+      </div>
+    </main>
+
+    <div class="detail-container" id="detail-container">
+      <!-- <div class="detail-project">
+        <div class="detail-project-container">
+          <h1>Project 2</h1>
+        <div class="heading">
+          <img src="https://i.pinimg.com/control/564x/83/c9/c5/83c9c502893d365e318a71aeaf6816e1.jpg" alt="">
+          <div class="data">
+            <div class="duration">
+              <h3>Duration</h3>
+              <p class="fromTo">
+                12 juni 2024 - 12 juni 2025
+              </p>
+              <p>1 year</p>
+            </div>
+            <div class="tech">
+              <h3>Technologies</h3>
+              <p>React js</p>
+            </div>
+          </div>
+        </div>
+        <div class="description">
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto, dolor. Esse, est.</p>
+        </div>
+        </div>
+      </div> -->
+    </div>
+
+  <script src="./assets/javascript/project.js"></script>
+  </body>
+</html>
