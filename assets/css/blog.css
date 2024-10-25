@@ -64,6 +64,7 @@ button {
     margin: auto;
     margin-bottom: 200px;
     padding: 20px;
+    box-sizing: border-box;
 }
 
 .blog-item {
@@ -126,6 +127,15 @@ button {
     color: white;
 }
 
-/* * {
-    border: 1px solid red;
-} */
+@media screen and (max-width: 720px) {
+    main {
+        padding: 10px;
+        padding-top: 100px;
+    }
+    .blogs-container {
+        padding: 10px;
+    }
+    .blog-item {
+        flex-direction: column;
+    }
+}

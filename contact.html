@@ -1,55 +1,89 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-      rel="stylesheet"
-    />
-    <title>Document</title>
-    <link rel="stylesheet" href="./assets/css/contact.css">
-    <link rel="stylesheet" href="./assets/css/nav.css">
-</head>
-<body>
-    <nav>
-        <div class="nav-content">
-          <div class="menu">
-            <a href="#" class="logo">
-              <img
-                src="https://dumbways.id/assets/images/brandred.png"
-              />
-            </a>
-            <a href="/">Home</a>
-            <a href="./blog.html">My Blog</a>
-            <a href="./project.html">My Project</a>
-          </div>
-          <a href="./contact.html" class="contact-me">Contact me</a>
-        </div>
-      </nav>
-    <main>
-        <div class="container">
-            <h1>GET IN TOUCH</h1>
-            <form id="my-form" name="my-form">
-                <label for="name">Name</label>
-                <input type="text" id="name" name="name">
-                <label for="email">email</label>
-                <input type="email" id="email" name="email">
-                <label for="phone-number">Phone Number</label>
-                <input type="number" id="phone-number" name="phone-number">
-                <label for="subject">Subject</label>
-                <input type="text" id="subject" name="subject">
-                <label for="message">Your Message</label>
-                <textarea name="message" id="message" rows="10" name="message"></textarea>
-                <div class="button-submit">
-                    <button>submit</button>
-                </div>
-            </form>
-        </div>
-    </main>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>
+        img {
+            object-fit: cover;
+            object-position: top;
+        }
+    </style>
+    <link rel="stylesheet" href="./assets/css/project.css">
+  </head>
+  <body>
 
+    <nav class="navbar navbar-expand-lg bg-body-tertiary container">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="/">
+            <img src="https://dumbways.id/assets/images/brandred.png" alt="DW" width="60px">
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 text-center">
+              <li class="nav-item">
+                <a class="nav-link active fw-bold" aria-current="page" href="/">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="./project.html">Add Project</a>
+              </li>
+              <li class="nav-item">
+            </ul>
+            <div class="flex-1 d-flex justify-content-center">
+                <a href="./contact.html" class="btn btn-dark text-center" type="submit">Contact</a>
+            </div>
+          </div>
+        </div>
+    </nav>
+
+    <section class="w-100 py-5 bg-secondary-subtle">
+      <div class="container">
+        <div class="col-md-6 offset-3 p-5">
+          <h1>GET IN TOUCH</h1>
+
+          <form id="my-form">
+              
+            <div class="mb-3">
+              <label for="name" class="form-label fw-">Name</label>
+              <input type="text" class="form-control" id="name">
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label fw-">Email</label>
+              <input type="email" class="form-control" id="email">
+            </div>
+            <div class="mb-3">
+              <label for="phone-number" class="form-label fw-">Phone Number</label>
+              <input type="number" class="form-control" id="phone-number">
+            </div>
+            <label class="w-100 mb-4">
+              <p class="mb-2">Subject</p>
+              <select class="form-select" aria-label="Default select example" id="subject">
+                <option selected>Open this select menu</option>
+                <option value="Let's talk">Let's talk</option>
+                <option value="Let's work togather">Let's work togather</option>
+                <option value="Can you help me?">Can you help me?</option>
+              </select>
+            </label>
+
+            <div class="mb-4">
+              <label for="message" class="mb-2">Your Message</label>
+              <textarea class="form-control" id="message" style="height: 100px"></textarea>
+            </div>
+            
+            <div class="d-flex justify-content-end">
+              <button type="submit" class="btn btn-dark rounded-pill px-4">Submit</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <script src="./assets/javascript/nav.js"></script>
 <script src="./assets/javascript/contact.js"></script>
 </body>
 </html>

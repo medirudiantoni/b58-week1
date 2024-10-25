@@ -69,6 +69,7 @@ function addMyProject(e){
         duration
     };
 
+    console.log(reqBody);
     projects.unshift(reqBody);
 
     renderProjectCard();
