@@ -20,8 +20,15 @@
               </li>
               <li class="nav-item">
             </ul>
-            <div class="flex-1 d-flex justify-content-center">
+            <div class="flex-1 d-flex column-gap-2 justify-content-center">
                 <a href="/contact" class="btn btn-dark text-center" type="submit">Contact</a>
+                {{#if navData.user }}
+                  <form action="/logout" method="post">
+                    <button class="btn btn-dark text-center" type="submit">Logout</button>
+                  </form>
+                {{else }}
+                <a href="/login" class="btn btn-dark text-center" type="submit">Login</a>
+                {{/if }}
             </div>
           </div>
         </div>

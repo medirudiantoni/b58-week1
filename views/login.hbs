@@ -5,9 +5,9 @@
         <div class="col-md-6 offset-3 p-5">
           <h1>LOGIN</h1>
           {{#if message}}
-            <p>{{ message }}</p>
+            <p class="text-danger">{{ message }}</p>
           {{/if}}
-          <form id="login-form" method="post" action="/user/login">
+          <form id="login-form" method="post" action="/user/login" class="mb-5">
               
             <div class="mb-3">
               <label for="email" class="form-label fw-">Email</label>
@@ -19,6 +19,7 @@
             </div>
             <button type="submit" class="btn btn-primary">Submit</button>
           </form>
+          <p>New user? please <a href="/register">Register here</a> first</p>
         </div>
       </div>
     </section>

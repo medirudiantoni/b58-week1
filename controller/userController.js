@@ -14,7 +14,6 @@ const createUser = async (req, res) => {
             }
         });
         console.log(newUser)
-        // res.status(201).json({ message: "CREATE new user success", data: newUser });
         res.redirect('/login')
     } catch (error) {
         res.status(500).json({ message: 'Server error', error })
@@ -78,23 +77,23 @@ const deleteUser = async (req, res) => {
 const userLogin = async (req, res) => {
     const { email, password } = req.body;
     try {
-        console.log('first', email, password)
         const theUser = await prisma.user.findUnique({
             where: { email: email }
         });
 
-        console.log('second', theUser)
         if(!theUser){
             return res.render('login.hbs', { message: "User doesn't exist"});
         }
 
         const isValidPassword = await bcrypt.compare(password, theUser.password);
 
-        console.log('third', isValidPassword);
         if(!isValidPassword){
             return res.render('login.hbs', { message: 'Wrong Password'});
         }
-        console.log('fourth', 'success')
+        req.session.user = {
+            name: theUser.name,
+            email: theUser.email
+        };
         res.redirect('/');
     } catch (error) {
         res.render('login.hbs', { message: 'server error'});
